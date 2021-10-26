@@ -17,7 +17,6 @@ function App() {
         .then((result) => {
           setWeather(result);
           setQuery("");
-          console.log("result");
         });
     }
   };
@@ -84,14 +83,13 @@ function App() {
               <div className="date">{dateBuilder(new Date())}</div>
             </div>
             <div className="weather-box">
-              <div className="temp">{Math.round(weather.main.temp)}*c</div>
+              <div className="temp">{Math.round(weather.main.temp)}°c</div>
               <div className="weather">{weather.weather[0].main}</div>
             </div>
           </div>
         ) : (
           ""
         )}
-        ;
       </main>
     </div>
   );
